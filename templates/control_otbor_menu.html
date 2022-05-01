@@ -1,0 +1,42 @@
+{{template "base" .}}
+
+{{define "title"}}Управление отбором{{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Управление отбором</title>
+</head>
+<body>
+    <p>
+        <a href="/control_otbor_input_term">Ввод терминалы</a>
+         | 
+        <a href="/control_otbor_input_fiscal">Ввод фискальные</a>
+         | 
+        <a href="/control_otbor_input_serial">Ввод заводские</a>
+    </p>
+    <hr>
+    <p>
+        <a href="/control_otbor_term">терминалы</a>
+         | 
+        <a href="/control_otbor_fiscal">фискальные</a>
+         | 
+        <a href="/control_otbor_serial">заводские</a>
+         |  
+        <a href="/control_otbor_partner">партнёр</a>
+    </p>
+    <h3>{{ .Kind }}</h3>
+    <p> {{.Rez}} </p>
+    <p> {{.Err}} </p>
+    <p> {{.Fname}} </p>
+    <table>
+        {{range .Data }}
+        <tr>
+            <td>{{ . }}</td>
+        </tr>
+        {{end}}
+    </table>
+</body>
+{{end}}
+
+{{template "footer" .}}

@@ -1,0 +1,77 @@
+{{template "base" .}}
+
+{{define "title"}} Терминалы {{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Терминалы</title>
+</head>
+<body>
+    <font size="5" color="darkcyan" face="serif">Терминалы</font>
+    <a href="/term_create"> | Добавь</a>
+    <table>
+        
+        <thead>
+            
+            <th><font size="4" color="magenta" face="serif">Правка</font></th>
+            <th><font size="4" color="magenta" face="serif">Удаление</font></th>
+            <th><font size="4" color="blue" face="serif">Терминал</font></th>
+            <th><font size="4" color="blue" face="serif">Отделение</font></th>
+            <th><font size="4" color="blue" face="serif">Модель</font></th>
+            <th><font size="4" color="blue" face="serif">Заводской_номер</font></th>
+            <th><font size="4" color="blue" face="serif">Дата_производства</font></th>
+            <th><font size="4" color="blue" face="serif">Версия_по</font></th>
+            <th><font size="4" color="blue" face="serif">Производитель</font></th>
+            <th><font size="4" color="blue" face="serif">Регистрационный_номер</font></th>
+            <th><font size="4" color="blue" face="serif">Опломбирован</font></th>
+            <th><font size="4" color="blue" face="serif">Фискальный_номер</font></th>
+            <th><font size="4" color="blue" face="serif">ОРО_серия</font></th>
+            <th><font size="4" color="blue" face="serif">ОРО_номерс</font></th>
+            <th><font size="4" color="blue" face="serif">Квитанции_серия</font></th>
+            <th><font size="4" color="blue" face="serif">Квитанции_1_лист</font></th>
+            <th><font size="4" color="blue" face="serif">Квитанции_номер</font></th>
+            <th><font size="4" color="blue" face="serif">Отправлено</font></th>
+            <th><font size="4" color="blue" face="serif">ОРО_архик</font></th>
+            <th><font size="4" color="blue" face="serif">Квитанции_архив</font></th>
+            <th><font size="4" color="blue" face="serif">Код_налоговой</font></th>
+            <th><font size="4" color="blue" face="serif">Техобслуживание</font></th>
+            <th><font size="4" color="blue" face="serif">Собственник</font></th>
+            <th><font size="4" color="blue" face="serif">Зарегистрировано</font></th>
+            <th><font size="4" color="blue" face="serif">Срок_действия</font></th>
+            
+        </thead>
+        {{range . }}
+        <tr>
+            <td><a href="/term_edit/{{.Id}}">Поправь </a></td>
+            <td><a href="/term_delete/{{.Id}}"> Убери</a></td>
+            <td>{{.Termial}}</td>
+            <td>{{.Department}}</td>
+            <td>{{.Model}}</td>
+            <td>{{.Serial_number}}</td>
+            <td>{{.Date_manufacture}}</td>
+            <td>{{.Soft}}</td>
+            <td>{{.Producer}}</td>
+            <td>{{.Rne_rro}}</td>
+            <td>{{.Sealing}}</td>
+            <td>{{.Fiscal_number}}</td>
+            <td>{{.Oro_serial}}</td>
+            <td>{{.Oro_number}}</td>
+            <td>{{.Ticket_serial}}</td>
+            <td>{{.Ticket_1sheet}}</td>
+            <td>{{.Ticket_number}}</td>
+            <td>{{.Sending}}</td>
+            <td>{{.Books_arhiv}}</td>
+            <td>{{.Tickets_arhiv}}</td>
+            <td>{{.To_rro}}</td>
+            <td>{{.Owner_rro}}</td>
+            <td>{{.Register}}</td>
+            <td>{{.Finish}}</td>
+            </td>
+        </tr>
+        {{end}}
+    </table>
+</body>
+{{end}}
+
+{{template "footer" .}}

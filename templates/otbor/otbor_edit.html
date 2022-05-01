@@ -1,0 +1,23 @@
+{{template "base" .}}
+
+{{define "title"}} OtborIndex {{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Правим</title>
+</head>
+<body>
+    <h3>Правим</h3>
+    <form method="POST">
+        <input type="hidden" name="id" value="{{.Id}}" />
+        <label>term</label><br>
+        <input type="text" name="term" value="{{.Term}}" /><br><br>
+        <label>dep</label><br>
+        <input type="text" name="dep" value="{{.Dep}}" /><br><br>
+        <input type="submit" value="Вноси!" />
+    </form>
+</body>
+{{end}}
+
+{{template "footer" .}}

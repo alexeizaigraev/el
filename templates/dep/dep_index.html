@@ -1,0 +1,72 @@
+{{template "base" .}}
+
+{{define "title"}} Отделения {{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Отделения</title>
+</head>
+<body>
+    <font size="5" color="darkcyan" face="serif">Отделения</font>
+    <a href="/dep_create"> | Добавь</a>
+    <table>
+        
+        <thead>
+            
+            <th><font size="4" color="magenta" face="serif">Правка</font></th>
+            <th><font size="4" color="magenta" face="serif">Удаление</font></th>
+            <th><font size="4" color="blue" face="serif">Отделение</font></th>
+            <th><font size="4" color="blue" face="serif">Область</font></th>
+            <th><font size="4" color="blue" face="serif">Район_области</font></th>
+            <th><font size="4" color="blue" face="serif">Район_города</font></th>
+            <th><font size="4" color="blue" face="serif">Тип_населённого_пункта</font></th>
+            <th><font size="4" color="blue" face="serif">Населённый_пункт</font></th>
+            <th><font size="4" color="blue" face="serif">Улица</font></th>
+            <th><font size="4" color="blue" face="serif">Тип_улицы</font></th>
+            <th><font size="4" color="blue" face="serif">Номер_дома</font></th>
+            <th><font size="4" color="blue" face="serif">Почтовый_индекс</font></th>
+            <th><font size="4" color="blue" face="serif">Партнёр</font></th>
+            <th><font size="4" color="blue" face="serif">Статус</font></th>
+            <th><font size="4" color="blue" face="serif">Зарегистрировано</font></th>
+            <th><font size="4" color="blue" face="serif">ЕДРПО</font></th>
+            <th><font size="4" color="blue" face="serif">Адрес_Длиннючий_вусмерть_адрес__Длиннючий_вусмерть_адрес__Длиннючий_вусмерть_адрес_</font></th>
+            <th><font size="4" color="blue" face="serif">Название_у_партнёра</font></th>
+            <th><font size="4" color="blue" face="serif">Идентификатор_терминала</font></th>
+            <th><font size="4" color="blue" face="serif">КОАТУ_индекс</font></th>
+            <th><font size="4" color="blue" face="serif">Код_налоговой</font></th>
+            <th><font size="4" color="blue" face="serif">КОАТУ_новый_индекс</font></th>
+            
+        </thead>
+        {{range . }}
+        <tr>
+            <td><a href="/dep_edit/{{.Id}}">Поправь </a></td>
+            <td><a href="/dep_delete/{{.Id}}"> Убери</a></td>
+            <td>{{.Department}}</td>
+            <td>{{.Region}}</td>
+            <td>{{.District_region}}</td>
+            <td>{{.District_city}}</td>
+            <td>{{.City_type}}</td>
+            <td>{{.City}}</td>
+            <td>{{.Street}}</td>
+            <td>{{.Street_type}}</td>
+            <td>{{.Hous}}</td>
+            <td>{{.Post_index}}</td>
+            <td>{{.Partner}}</td>
+            <td>{{.Status}}</td>
+            <td>{{.Register}}</td>
+            <td>{{.Edrpou}}</td>
+            <td>{{.Address}}</td>
+            <td>{{.Partner_name}}</td>
+            <td>{{.Id_terminal}}</td>
+            <td>{{.Koatu}}</td>
+            <td>{{.Tax_id}}</td>
+            <td>{{.Koatu2}}</td>
+            </td>
+        </tr>
+        {{end}}
+    </table>
+</body>
+{{end}}
+
+{{template "footer" .}}

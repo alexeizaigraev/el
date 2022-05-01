@@ -1,0 +1,99 @@
+{{template "base" .}}
+
+{{define "title"}} Новое отделение {{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Новое отделение</title>
+    <style> label { display: inline-block; width: 100px; } </style>
+</head>
+<body>
+    <h3>Новое отделение</h3>
+    <form method="POST">
+        <label>department</label>
+        <input type="text" size="70%" name="department" /><br><br>
+        <label>region</label>
+        <input type="text" size="70%" name="region" /><br><br>
+        <label>district_region</label>
+        <input type="text"  size="70%" name="district_region" /><br><br>
+        <label>district_city</label>
+        <input type="text"  size="70%" name="district_city" /><br><br>
+        
+        <label>city_type</label>
+        <select name="city_type">
+            <option></option>
+            <option>м.</option>
+            <option>смт.</option>
+            <option>с.</option>
+        </select>
+        <br><br>
+        <label>city</label>
+        <input type="text"  size="70%" name="city" /><br><br>
+        <label>street</label>
+        <input type="text"  size="70%" name="street" /><br><br>
+        <label>street_type</label>
+        <select name="street_type">
+            <option></option>
+            <option>бульвар</option>
+            <option>вул.</option>
+            <option>вулиця</option>
+            <option>майдан</option>
+            <option>мікрорайон</option>
+            <option>площа</option>
+            <option>провулок</option>
+            <option>проїзд</option>
+            <option>проспект</option>
+            <option>шосе</option>
+        </select>
+        <br><br>
+        <label>hous</label>
+        <input type="text"  size="70%" name="hous" /><br><br>
+        <label>post_index</label>
+        <input type="text" name="post_index" /><br><br>
+        <label>partner</label>
+        <select name="partner">
+            <option></option>
+            <option>allo</option>
+            <option>avtolux</option>
+            <option>delivery</option>
+            <option>denka</option>
+            <option>dk_trend</option>
+            <option>EPS</option>
+            <option>justin</option>
+            <option>nazarenko</option>
+            <option>pony</option>
+            <option>postua</option>
+            <option>sat</option>
+            <option>sirnykvv</option>
+            <option>sirykav</option>
+            <option>surya</option>
+            <option>zun</option>
+
+        </select>
+        <br><br>
+        <label>register</label>
+        <input type="text" name="status" /><br><br>
+        <label>register</label>
+        <input type="text" name="register" /><br><br>
+        <label>edrpou</label>
+        <input type="text" name="edrpou" /><br><br>
+        <label>address</label>
+        <input type="text" size="100%" name="address" /><br><br>
+        <label>partner_name</label>
+        <input type="text" name="partner_name" /><br><br>
+        <label>id_terminal</label>
+        <input type="text" name="id_terminal" /><br><br>
+        <label>koatu</label>
+        <input type="text" name="koatu" /><br><br>
+        <label>tax_id</label>
+        <input type="text" name="tax_id" /><br><br>
+        <label>koatu2</label>
+        <input type="text" name="koatu2" /><br><br>
+
+        <input type="submit" value="Вноси!" />
+    </form>
+</body>
+{{end}}
+
+{{template "footer" .}}

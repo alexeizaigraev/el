@@ -1,0 +1,26 @@
+{{template "base" .}}
+
+{{define "title"}}{{ .Kind }}{{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Kind }}</title>
+</head>
+<body>
+    <b><font size="4" color="darkcyan" face="serif">{{ .Kind }}</font></b>
+   {{ .User }}
+    <p> <font size="4" color="darkmagenta" face="serif">{{.Rez}} </font></p>
+    <p> <font size="4" color="darkred" face="serif">{{.Err}} </font></p>
+    <p> <font size="4" color="blue" face="serif">{{.Fname}} </font></p>
+    <table>
+        {{range .Data }}
+        <tr>
+            <td>{{ . }}</td>
+        </tr>
+        {{end}}
+    </table>  
+</body>
+{{end}}
+
+{{template "footer" .}}

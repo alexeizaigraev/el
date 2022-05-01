@@ -1,0 +1,66 @@
+{{template "base" .}}
+
+{{define "title"}} Новый терминал {{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title> Новый терминал </title>
+    <style> label { display: inline-block; width: 100px; } </style>
+</head>
+<body>
+    <h3>Новое отделение</h3>
+    <form method="POST">
+        <label>termial</label>
+        <input type="text" name="termial" /><br><br>
+        <label>department</label>
+        <input type="text" name="department" /><br><br>
+        <label>model</label>
+        <input type="text"  name="model" /><br><br>
+        <label>serial_number</label>
+        <input type="text"  name="serial_number" /><br><br>
+        <label>date_manufacture</label>
+        <input type="text" name="date_manufacture" /><br><br>
+        <label>soft</label>
+        <input type="text"  name="soft" /><br><br>
+        <label>producer</label>
+        <input type="text"  name="producer" /><br><br>
+        <label>rne_rro</label>
+        <input type="text" name="rne_rro" /><br><br>
+        <label>sealing</label>
+        <input type="sealing"  name="hous" /><br><br>
+        <label>fiscal_number</label>
+        <input type="text" name="fiscal_number" /><br><br>
+        <label>oro_serial</label>
+        <input type="text" name="oro_serial" /><br><br>
+        <label>oro_number</label>
+        <input type="text" name="oro_number" /><br><br>
+        <label>ticket_serial</label>
+        <input type="text" name="ticket_serial" /><br><br>
+        <label>ticket_1sheet</label>
+        <input type="text" name="ticket_1sheet" /><br><br>
+        <label>address</label>
+        <input type="ticket_number" size="100%" name="address" /><br><br>
+        <label>partner_name</label>
+        <input type="text" name="ticket_number" /><br><br>
+        <label>sending</label>
+        <input type="text" name="sending" /><br><br>
+        <label>books_arhiv</label>
+        <input type="text" name="books_arhiv" /><br><br>
+        <label>tickets_arhiv</label>
+        <input type="text" name="tickets_arhiv" /><br><br>
+        <label>to_rro</label>
+        <input type="text" name="to_rro" /><br><br>
+        <label>owner_rro</label>
+        <input type="text" name="owner_rro" /><br><br>
+        <label>register</label>
+        <input type="text" name="register" /><br><br>
+        <label>finish</label>
+        <input type="text" name="finish" /><br><br>
+
+        <input type="submit" value="Вноси!" />
+    </form>
+</body>
+{{end}}
+
+{{template "footer" .}}

@@ -1,0 +1,23 @@
+{{template "base" .}}
+
+{{define "title"}}Домашняя страницы{{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Заходим</title>
+</head>
+<body>
+    <h3>База данных</h3>
+    <p><a href="/otbor_refresh">Обнови</a></p>
+    <p><a href="/otbor_index">Отбор</a>
+     | 
+        <a href="/departments">Отделения</a>
+     | 
+        <a href="/departments">Отделения</a>
+     | 
+        <a href="/terminals">Терминалы</a></p>
+</body>
+{{end}}
+
+{{template "footer" .}}

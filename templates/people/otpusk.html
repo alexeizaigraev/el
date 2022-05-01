@@ -1,0 +1,26 @@
+{{template "base" .}}
+
+{{define "title"}}Приём{{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Отпуск</title>
+</head>
+<body>
+    <h3>Отпуск</h3>
+    <p> {{.Rez}} </p>
+    <p> {{.Err}} </p>
+    <table>
+        {{range .Data }}
+        <tr>
+            <td>{{ . }}</td>
+        </tr>
+        {{end}}
+    </table>
+    <p> {{.Fname}} </p>
+    
+</body>
+{{end}}
+
+{{template "footer" .}}

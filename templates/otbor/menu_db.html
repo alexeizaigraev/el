@@ -1,0 +1,26 @@
+{{template "base" .}}
+
+{{define "title"}}Домашняя страницы{{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Заходим</title>
+</head>
+<body>
+    <h3>База данных</h3>
+    <p><a href="/otbor_refresh">Обнови всё</a></p>
+    <p><a href="/control_otbor_input_term">ввод терминалы</a></p>
+    <hr>
+    <p><a href="/control_otbor_menu">из файла отбор</a></p>
+    <hr>
+    <p>
+        <a href="/otbor_index">Отбор</a>
+     | 
+        <a href="/dep_index">Отделения</a>
+     | 
+        <a href="/term_index">Терминалы</a></p>
+</body>
+{{end}}
+
+{{template "footer" .}}

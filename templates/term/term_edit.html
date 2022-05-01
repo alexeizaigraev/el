@@ -1,0 +1,65 @@
+{{template "base" .}}
+
+{{define "title"}} Редактирование терминала {{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Правим</title>
+    <style> label { display: inline-block; width: 100px; } </style>
+</head>
+<body>
+    <h3>Правим</h3>
+    <form method="POST">
+        <input type="hidden" name="id" value="{{.Id}}" />
+        <label>termial</label>
+        <input type="text" name="termial" value="{{.Termial}}" /><br><br>
+        <label>department </label>
+        <input type="text" name="department" value="{{.Department}}" /><br><br>
+        <label>model</label>
+        <input type="text"  name="model" value="{{.Model}}" /><br><br>
+        <label>serial_number</label>
+        <input type="text"  name="serial_number" value="{{.Serial_number}}" /><br><br>
+        <label>date_manufacture</label>
+        <input type="text" name="date_manufacture" value="{{.Date_manufacture}}" /><br><br>
+        <label>soft</label>
+        <input type="text"  name="soft" value="{{.Soft}}" /><br><br>
+        <label>producer</label>
+        <input type="text"  name="producer" value="{{.Producer}}" /><br><br>
+        <label>rne_rro</label>
+        <input type="text" name="rne_rro" value="{{.Rne_rro}}" /><br><br>
+        <label>sealing</label>
+        <input type="text"  name="sealing" value="{{.Sealing}}" /><br><br>
+        <label>fiscal_number</label>
+        <input type="text" name="fiscal_number" value="{{.Fiscal_number}}" /><br><br>
+        <label>oro_serial</label>
+        <input type="text" name="oro_serial" value="{{.Oro_serial}}" /><br><br>
+        <label>oro_number</label>
+        <input type="text" name="oro_number" value="{{.Oro_number}}" /><br><br>
+        <label>ticket_serial</label>
+        <input type="text" name="ticket_serial" value="{{.Ticket_serial}}" /><br><br>
+        <label>ticket_1sheet</label>
+        <input type="text" name="ticket_1sheet" value="{{.Ticket_1sheet}}" /><br><br>
+        <label>ticket_number</label>
+        <input type="text" name="ticket_number" value="{{.Ticket_number}}" /><br><br>
+        <label>sending</label>
+        <input type="text" name="sending" value="{{.Sending}}" /><br><br>
+        <label>books_arhiv</label>
+        <input type="text" name="books_arhiv" value="{{.Books_arhiv}}" /><br><br>
+        <label>tickets_arhiv</label>
+        <input type="text" name="tickets_arhiv" value="{{.Tickets_arhiv}}" /><br><br>
+        <label>to_rro</label>
+        <input type="text" name="to_rro" value="{{.To_rro}}" /><br><br>
+        <label>owner_rro</label>
+        <input type="text" name="owner_rro" value="{{.Owner_rro}}" /><br><br>
+        <label>register</label>
+        <input type="text" name="register" value="{{.Register}}" /><br><br>
+        <label>finish </label>
+        <input type="text" name="finish" value="{{.Finish}}" /><br><br>
+                
+        <input type="submit" value="Вноси!" />
+    </form>
+</body>
+{{end}}
+
+{{template "footer" .}}

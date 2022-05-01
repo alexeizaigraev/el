@@ -1,0 +1,22 @@
+{{template "base" .}}
+
+{{define "title"}}{{ .Kind }}{{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Привет! :)</title>
+</head>
+<body>
+    <h2>Привет! :)</h2>
+    <form action="/login" method="POST">
+        <label>Логин</label><br>
+        <input type="text" name="username" /><br><br>
+        <label>Пароль</label><br>
+        <input type="password" name="password" /><br><br>
+        <input type="submit" value="Отправить" />
+    </form>
+</body>
+{{end}}
+
+{{template "footer" .}}

@@ -1,0 +1,27 @@
+{{template "base" .}}
+
+{{define "title"}} OtborIndex {{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Отбор</title>
+</head>
+<body>
+    <h2>Отбор</h2>
+    <table>
+        <thead><th>Id</th><th>term</th><th>dep</th><th></th></thead>
+        {{range . }}
+        <tr>
+            <td>{{.Term}}</td>
+            <td>{{.Dep}}</td>
+            <td><a href="/otbor_edit/{{.Id}}">Поправь</a> |
+                <a href="/otbor_delete/{{.Id}}">Убери</a>
+            </td>
+        </tr>
+        {{end}}
+    </table>
+</body>
+{{end}}
+
+{{template "footer" .}}

@@ -1,0 +1,60 @@
+{{template "base" .}}
+
+{{define "title"}} Редактирование отделения {{end}}
+
+{{define "main"}}
+<head>
+    <meta charset="UTF-8">
+    <title>Правим</title>
+    <style> label { display: inline-block; width: 100px; } </style>
+</head>
+<body>
+    <h3>Правим</h3>
+    <form method="POST">
+        <input type="hidden" name="id" value="{{.Id}}" />
+        <label>department</label>
+        <input type="text" name="department" value="{{.Department}}" /><br><br>
+        <label>region </label>
+        <input type="text" size="70%" name="region" value="{{.Region}}" /><br><br>
+        <label>district_region</label>
+        <input type="text"  size="70%" name="district_region" value="{{.District_region}}" /><br><br>
+        <label>district_city</label>
+        <input type="text"  size="70%" name="district_city" value="{{.District_city}}" /><br><br>
+        <label>city_type</label>
+        <input type="text" name="city_type" value="{{.City_type}}" /><br><br>
+        <label>city</label>
+        <input type="text"  size="70%" name="city" value="{{.City}}" /><br><br>
+        <label>street</label>
+        <input type="text"  size="70%" name="street" value="{{.Street}}" /><br><br>
+        <label>street_type</label>
+        <input type="text" name="street_type" value="{{.Street_type}}" /><br><br>
+        <label>hous</label>
+        <input type="text"  size="70%" name="hous" value="{{.Hous}}" /><br><br>
+        <label>post_index</label>
+        <input type="text" name="post_index" value="{{.Post_index}}" /><br><br>
+        <label>partner</label>
+        <input type="text" name="partner" value="{{.Partner}}" /><br><br>
+        <label>register</label>
+        <input type="text" name="status" value="{{.Status}}" /><br><br>
+        <label>register</label>
+        <input type="text" name="register" value="{{.Register}}" /><br><br>
+        <label>edrpou</label>
+        <input type="text" name="edrpou" value="{{.Edrpou}}" /><br><br>
+        <label>address</label>
+        <input type="text" size="100%" name="address" value="{{.Address}}" /><br><br>
+        <label>partner_name</label>
+        <input type="text" name="partner_name" value="{{.Partner_name}}" /><br><br>
+        <label>id_terminal</label>
+        <input type="text" name="id_terminal" value="{{.Id_terminal}}" /><br><br>
+        <label>koatu</label>
+        <input type="text" name="koatu" value="{{.Koatu}}" /><br><br>
+        <label>tax_id</label>
+        <input type="text" name="tax_id" value="{{.Tax_id}}" /><br><br>
+        <label>koatu2</label>
+        <input type="text" name="koatu2" value="{{.Koatu2}}" /><br><br>
+        <input type="submit" value="Вноси!" />
+    </form>
+</body>
+{{end}}
+
+{{template "footer" .}}
